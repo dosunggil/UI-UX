@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습정리</title>
+<style>
+a {
+	text-decoration: none;
+	color: inherit; /* initial;*/
+	cursor: pointer /* onclick 버튼에도 커서 모양을 손가락으로 바꿈*/
+}
+
+table th, table td {border:1px solid; padding:10px;}
+table {border-collapse:collapse;
+		border-top:2px solid; 
+		border-bottom:2px solid; 
+		border-right:2px solid; 
+		border-left:2px solid; 
+		
+		width:600px;}
+table th {font-size: 20px}
+table td {font-size: 15px;
+			text-align: center;}
+
+</style>
+</head>
+
+<body>
+<h1>현재 페이지 구성</h1>
+<ul>
+	<li><a href="#iu">이미지</a></li>
+	<li><a href='#vi'>비디오</a></li>
+	<li><a href="#food">식단표</a></li>
+</ul>
+
+<h1>화면 연결하기</h1>
+<ul>
+	<li><a target="_blank" href="image.html">이미지화면</a></li>
+	<li><a target="_blank" href="video.html">비디오화면</a></li>
+	<li><a target="_blank" href="../remind.html">식단표화면</a></li>
+</ul>
+
+<table id="food">
+	<tr>
+		<th>시간/요일</th>
+		<th>월요일</th>
+		<th>화요일</th>
+		<th>수요일</th>
+		<th>목요일</th>
+		<th>금요일</th>
+	</tr>
+	
+	<tr>
+		<th>아침</th>
+		<td>샐러드</td>
+		<td>된장국</td>
+		<td rowspan="2">생선조림</td>
+		<td>샌드위치</td>
+		<td>현미밥</td>
+	</tr>
+
+	<tr>
+		<th>점심</th>
+		<td colspan="2">카레</td>
+		<td>냉면</td>
+		<td>햄버거</td>
+	</tr>
+
+	<tr>
+		<th>저녁</th>
+		<td>해물찜</td>
+		<td>등갈비</td>
+		<td>쌀국수</td>
+		<td>피자</td>
+		<td>치킨</td>
+	</tr>
+</table><br><br>
+
+<img id="iu" alt="" src="https://t1.daumcdn.net/cfile/tistory/99BB43455E8108F209" width="500px">
+<br><br>
+
+<video id="vi" src="../media/wolf.mp4" width="500px" controls autoplay muted ></video> <br><br>
+<a href="#">맨 위로</a>
+</body>
+
+
+</html>

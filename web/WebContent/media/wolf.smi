@@ -1,0 +1,19 @@
+<SAMI>
+<HEAD>
+<Title>Caption Studio - (c)2017 DEVCO Studio https://caption.devco.kr/</Title>
+<SAMIParam>
+	Metrics {time:ms;}
+	Spec {MSFT:1.0;}
+</SAMIParam>
+<STYLE TYPE="text/css">
+	p {margin-left:8pt; margin-right:8pt; margin-bottom:2pt; margin-top:2pt;text-align:center;font-size:20pt; font-family:arial, sans-serif;font-weight:normal; color:White;}
+	.KRCC {Name:Korean; lang:ko-KR; SAMIType:CC;}
+</STYLE>
+</HEAD>
+
+<BODY>
+<SYNC Start=0><P Class=KRCC>이 늑대는 무료입니다.</P></SYNC>
+<SYNC Start=24570><P Class=KRCC>아닐걸?</P></SYNC>
+
+</BODY>
+</SAMI>

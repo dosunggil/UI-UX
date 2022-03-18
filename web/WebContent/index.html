@@ -14,10 +14,24 @@ table th, table td {border: 1px solid black;
 			padding: 8px;
 			font-size: 18px;
 			}
+a {
+	text-decoration: none;
+	color: inherit; /* initial;*/
+	cursor: pointer /* onclick 버튼에도 커서 모양을 손가락으로 바꿈*/
+}
 </style>
 </head>
-<body><h2>
-1.블록 레벨 텍스트 태그<br></h2>
+<body>
+<ul>
+	<li><a target="_blank" onclick="alert('식단표 클릭!')">식단표 alert창 띄우기</a></li>
+	<li><a target="_blank" onclick="href='remind.html'">식단표</a></li>
+	<li><a target="_blank" href="./html0318/image.html">이미지실습</a></li>
+	<li><a target="_blank" href="html0318/video.html">비디오실습</a></li>
+	<li><a target="_blank" href="html0318/ex01.html">실습정리</a></li>
+
+</ul>
+
+<h2>1.블록 레벨 텍스트 태그<br></h2>
 :혼자서 한 줄을 차지하여 너비가 100% 꽉 차게 표시되는 태그<br>
 <br>
 1)h태그: heading태그 - 제목을 표시하는 태그로 h1~h6 

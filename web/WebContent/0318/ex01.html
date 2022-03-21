@@ -5,20 +5,18 @@
 <title>실습정리</title>
 <style>
 a {
+/*  			앵커 (a태그)에 대한 스타일  */
 	text-decoration: none;
 	color: inherit; /* initial;*/
 	cursor: pointer /* onclick 버튼에도 커서 모양을 손가락으로 바꿈*/
 }
 
+
 table th, table td {border:1px solid; padding:10px;}
 table {border-collapse:collapse;
-		border-top:2px solid; 
-		border-bottom:2px solid; 
-		border-right:2px solid; 
-		border-left:2px solid; 
-		
+		border:2px solid; 
 		width:600px;}
-table th {font-size: 20px}
+table th {font-size: 20px; background-color: gray;}
 table td {font-size: 15px;
 			text-align: center;}
 
@@ -41,13 +39,14 @@ table td {font-size: 15px;
 </ul>
 
 <table id="food">
+	<caption style="border: 2px; padding: 10px; font-size: 25px" ><strong>식단표</strong></caption>
 	<tr>
 		<th>시간/요일</th>
-		<th>월요일</th>
-		<th>화요일</th>
-		<th>수요일</th>
-		<th>목요일</th>
-		<th>금요일</th>
+		<th style="background-color: red;">월요일</th>
+		<th style="background-color: orange;">화요일</th>
+		<th style="background-color: yellow;">수요일</th>
+		<th style="background-color: green;">목요일</th>
+		<th style="background-color: blue;">금요일</th>
 	</tr>
 	
 	<tr>
@@ -79,7 +78,10 @@ table td {font-size: 15px;
 <img id="iu" alt="" src="https://t1.daumcdn.net/cfile/tistory/99BB43455E8108F209" width="500px">
 <br><br>
 
-<video id="vi" src="../media/wolf.mp4" width="500px" controls autoplay muted ></video> <br><br>
+<video id="vi" src="../media/wolf.mp4" width="500px" loop controls autoplay muted >
+	<track kind="subtitles" src="../media/wolf.vtt"	srclang="ko" default>
+	<track kind="subtitles" src="../media/wolf.vtt" srclang="en">	
+</video> <br><br>
 <a href="#">맨 위로</a>
 </body>
 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 양식 태그</title>
+<style>
+	table {
+		border-collapse: collapse;
+		border: 3px solid;
+		width: 600px;
+		}
+	th, td {
+		border: 1px solid #222; padding:10px;
+	}
+	td {
+		text-align: center;
+	}
+	textarea {
+			width:300px; height: 200px;	
+			resize:none;
+/* 			텍스트 상자 사이즈를 바꿀 수 있는 버튼 삭제 */
+	}
+</style>
+
+</head>
+<body>
+<h2>입력양식실습</h2>
+<p>form 태그 : 사용자의 입력을 받는 화면을 구성할 때 사용하는 태그로,
+<br>	입력한 데이터를 다른 페이지로 보낼 수 있는 태그입니다.<br>
+		예)  로그인할 때 아이디와 비밀번호를 입력.<br>
+			 회원가입할 때 가입에 필요한 여러 정보를 입력. <br>
+</p>
+
+<h3> input 태그 </h3>
+<table>
+	<tr>
+		<th>text</th>
+		<td>한 줄 텍스트를 입력하는 태그 (여러줄은 안됩니다.)</td>	
+	</tr>
+	<tr>
+		<th>password</th>
+		<td>입력 텍스트가 보이지 않는 비밀번호 태그</td>
+	</tr>
+	<tr>
+		<th>hidden</th>
+		<td>실제 소스에는 있지만 화면에서는 보이지 않는 히든 태그</td>	
+	</tr>
+	<tr>
+		<th>radio</th>
+		<td>여러항목 중에 한 개만 선택할 때 사용하는 태그</td>
+	</tr>	
+	<tr>
+		<th>checkbox</th>
+		<td>여러항목을 모두 선택할 수 있는 태그</td>	
+	</tr>
+	<tr>
+		<th>file</th>
+		<td>첨부할 파일을 선택하는 태그</td>
+	</tr>
+	<tr>
+		<th>submit</th>
+		<td>폼 태그내의 입력데이터를 전송하는 버튼입니다.</td>
+	</tr>
+</table>
+<br><hr><br>
+
+<p>**form 태그를 통해 입력 데이터를 전송하려면 반드시 name 속성이 있어야 합니다.</p>
+<p>**action 속성값이 없거나 지정하지 않으면 자기 자신 페이지를 연결합니다.</p>
+<p>**autocomplete 속성은 자동완성 기능 ( 없으면 기본으로 on )</p>
+<p>**전송되는 입력값들을 파라미터라고 합니다.<br>
+	 전송하는 데이터가 여러개인 경우 각 파라미터는 & 로 구분되어 있습니다.<br>
+	 파라미터가 노출이 되는 형태, 노출이 되지 않는 형태가 있는데,<br>
+	 노출되는 형태는 method: get 방식(기본값), 노출되지 않는 형태는 method: post 방식</p>
+	 
+<p>
+**placeholder : 텍스트 입력태그에 무엇을 입력하는 태그인지 보여지게 하는 속성</p>
+<p>
+**required : 반드시 입력해야만 하는 필수입력항목을 입력하지 않으면 submit 되지 않도록 처리하려면<br>
+프로그래밍적으로 해결할 수도 있지만 태그 자체의 속성을 이용할 수도 있다.</p>
+<p>
+**readonly : 입력태그이지만 변경 불가</p>
+<p>
+**disalbed : 입력태그이지만 변경 불가</p>
+<p>*차이점 : readonly 태그는 submit 시에 데이터가 전송됩니다.<br>
+		disabled 태그는 submit 시에 데이터가 전송되지 않습니다.</p>
+<p>**파일을 첨부하여 전송하는 경우 반드시 지정해야 할 속성<br>
+1.method 를 post 로 지정해야 합니다.<br>
+2.enctype 을 multipart/form-data 를 지정해야만 합니다.</p>
+
+	 
+
+<form action="" autocomplete="off" method="get" enctype="mulipart/form-data">
+<!-- 	action 속성은 다른 페이지로 이동하는 속성   action="../0318/ex01.html" -->
+	<div>* 성함<input style="width:60%;" placeholder="성함" type="text" name="name" required disabled style="border: 2px solid;" ></div>
+	<div>  번호<input placeholder="전화번호"  type="text" name="phone" style="border: 2px solid;" readonly value="0123-312-123"></div>
+	<div>* 암호<input placeholder="password"  type="password" name="password" required style="border: 2px solid;"></div>
+	<input type="hidden" name="none" value="cho">
+	<div>과목선택
+			<input id="rnr" type="radio" name="subject" value="국어"><label for="rnr"> 국어</label>
+			<input id="dud" type="radio" name="subject" value="영어" checked><label for="dud">영어</label>
+			<input id="tn" type="radio" name="subject" value="수학"> <label for="tn">수학</label>
+<!-- 			동일한 name 속성중에 한개만 선택 가능하다. -->
+<!--			전송시 value 로 지정한 값이 전송이 된다 -->
+	</div>
+	<div>성별선택
+			<input id="male" type="radio" name="gender" value="남" checked><label for="male">남성</label>
+			<input id="female" type="radio" name="gender" value="여"><label for="female" > 여성</label> 
+	</div>
+	<div>다중선택
+			<label><input type="checkbox" name="sports" value="농구">농구</label>
+			<label><input type="checkbox" name="sports" value="배구">배구</label>
+			<label><input type="checkbox" name="sports" value="축구">축구</label>
+			<label><input type="checkbox" name="sports" value="야구">야구</label>
+			<label><input type="checkbox" name="sports" value="탁구">탁구</label>
+	</div>
+	<div>파일선택: <input type="file" name="filename">
+	</div>
+<!-- 	파일을 첨부하여 전송해야하는 경우에는 반드시 노출형태를 method: post 로 해야한다 (너무 길어서) -->
+	<div>여러줄입력태그:
+			<textarea rows="5" cols="20" name="memo"></textarea>
+			<textarea name="memo"></textarea>
+	
+	</div>
+	<div>반려가족:
+			<select name="coap">
+				<option value="c01">개</option>
+				<option value="c02">고양이</option>
+				<option value="c03">새</option>
+				<option value="c04">식물</option>
+			</select>
+	</div>
+	
+	<div><input type="submit" value="회원가입"></div> 
+<!-- 	submit 타입의 value 는 버튼의 이름 변경 속성 -->
+<!-- 		required 속성은 반드시 입력해야 하는 항목일때 사용 -->
+</form>
+<br><hr>
+<h3>textarea 태그</h3>
+<p>여러줄을 입력하는데 사용하는 입력 텍스트 태그</p>
+<br>
+<h3>select 태그</h3>
+<p>여러개의 목록에서 선택하는 드랍다운 목록 태그</p>
+</body>
+</html>

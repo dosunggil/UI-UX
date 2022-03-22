@@ -22,42 +22,43 @@ table th, table td {border:1px solid; padding:5px 1px 5px 10px;}
 </head>
 
 <body>
+<!-- 입력 항목의 값(데이터)을 전송하려면 form태그에 선언한다
+각 입력항목은 name 속성을 가져야 한다
+: 입력항목의 데이터가 name 속성의 파라미터명으로 전송이 되어진다 -->
+<input type="button" value="닫기"  onclick="window.close()">
 
+
+<form>
 <table>
+<caption style="border: 2px; padding: 10px; font-size: 25px" ><strong>회원가입 정보</strong></caption>
 	<tr>
-		<th>아이디
-		</th>
+		<th>아이디</th>
 		<td> <input required type="text" name="Id" style="width:80%;">
 		</td>
 	</tr>
 	<tr>
-		<th>비밀번호
-		</th>
+		<th>비밀번호</th>
 		<td> <input required type="password" name="password" style="width:80%;">
 		</td>
 	</tr>
 	<tr>
-		<th>비밀번호확인
-		</th>
-		<td> <input required type="password" name="password" style="width:80%;">
+		<th>비밀번호확인</th>
+		<td> <input required type="password" name="password_ck" style="width:80%;">
 		</td>
 	</tr>
 	<tr>
-		<th>이름
-		</th>
-		<td> <input required type="text" name="Id" style="width:80%;">
+		<th>이름</th>
+		<td> <input required type="text" name="name" style="width:80%;">
 		</td>
 	</tr>
 	<tr>
-		<th>성별
-		</th>
+		<th>성별</th>
 		<td> <label><input type="radio" name="gender" value="남" checked>남</label>
 			 <label><input type="radio" name="gender" value="여">여</label>
 		</td>
 	</tr>
 	<tr>
-		<th>전화번호
-		</th>
+		<th>전화번호</th>
 		<td><select style="width: 60px; border:2px solid;" name="phone"> 
 				<option value="c01">010</option>
 				<option value="c02">011</option>
@@ -68,26 +69,25 @@ table th, table td {border:1px solid; padding:5px 1px 5px 10px;}
 		</td>
 	</tr>
 	<tr>
-		<th>sms수신여부
-		</th>
+		<th>sms수신여부	</th>
 		<td><label><input type="checkbox" name="sms" value="yes">수신함</label>
 		</td>
 	</tr>
 	<tr>
-		<th>이메일
-		</th>
+		<th>이메일</th>
 		<td>
-				<input style="width:120px" type="text" name="email"> @ 
-		<select style="width:80px" name="email">
-				<option value="e01">직접입력</option>
-				<option value="e02">gmail.com</option>
-				<option value="e03">naver.com</option>
+				<input style="width:120px" type="text" name="email01"> @ 
+		<select style="width:80px" name="email02">
+				<option >직접입력</option>
+				<option selected value="gamil.com">gmail.com</option>
+				<option value="naver.com">naver.com</option>
+<!-- 				email=chothegenius&service=gamil..com -->
+<!-- 					"abc"+"@"+"naver.com" -->
 			</select>
 		</td>
 	</tr>
 	<tr>
-		<th>사진등록
-		</th>
+		<th>사진등록</th>
 		<td><input style="border:0px;" type="file" name="filename">
 		</td>
 	</tr>
@@ -100,6 +100,7 @@ table th, table td {border:1px solid; padding:5px 1px 5px 10px;}
 
 
 </table>
+</form>
 
 <!-- <form style="padding:15px 1px; width:500px; ; "action="" autocomplete="off" method="get"> -->
 <!-- 	<div style="padding:15px 1px;" > -->

@@ -1,5 +1,4 @@
-# 오후수업 프로젝트
-* README
+# 0322 현재까지 복습
 
 ## 첫 프로젝트 만들기
 * file -> new -> dynamic web project

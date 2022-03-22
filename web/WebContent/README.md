@@ -1,6 +1,3 @@
-# 오후수업 프로젝트
-* README
-
 ## 첫 프로젝트 만들기
 * file -> new -> dynamic web project
 * src/main/webapp 폴더에서 프로젝트 진행

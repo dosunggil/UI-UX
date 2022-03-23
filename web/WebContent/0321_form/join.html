@@ -17,7 +17,7 @@ table th, table td {border:1px solid; padding:5px 1px 5px 10px;}
 		border: 2px solid;
 	}
 	
-
+input [name=phone] {width:10px;}
 </style>
 </head>
 
@@ -27,6 +27,9 @@ table th, table td {border:1px solid; padding:5px 1px 5px 10px;}
 : 입력항목의 데이터가 name 속성의 파라미터명으로 전송이 되어진다 -->
 <input type="button" value="닫기"  onclick="window.close()">
 
+<!-- form 태그내에 file 태그를 전송하는 경우 -->
+<!-- 1.form 태그 전송방식이 post 여야 한다.: method="post" -->
+<!-- 2.파일데이터전송가능 형태를 지정: enctype="mulipart/form-data"" -->
 
 <form>
 <table>
@@ -59,13 +62,13 @@ table th, table td {border:1px solid; padding:5px 1px 5px 10px;}
 	</tr>
 	<tr>
 		<th>전화번호</th>
-		<td><select style="width: 60px; border:2px solid;" name="phone"> 
+		<td><select  name="numb"> 
 				<option value="c01">010</option>
 				<option value="c02">011</option>
 				<option value="c03">02</option>
 			</select>
-		<input style="width:80px" type="text" name="phone">
-		<input style="width:80px" type="text" name="phone">
+		<input type="text" name="phone">
+		<input type="text" name="phone">
 		</td>
 	</tr>
 	<tr>

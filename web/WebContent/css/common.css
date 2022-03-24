@@ -1,4 +1,8 @@
 @charset "UTF-8";
-table {border-collapse: collapse; margin: 0 auto;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+* { font-family: 'Noto Sans KR', sans-serif;}
+table {border-collapse: collapse; margin: 5px auto;}
 th, td {border:1px solid; padding: 4px;}
-body {text-align:center;}
+body {text-align:center; margin: 0 auto;}
+ul, ol {list-style-type: none; padding: 0;}
+

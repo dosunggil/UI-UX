@@ -3,16 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+input[type=text], input[type=password] { height: 25px;}
+input[type=checkbox] {width:30px; height:30px; vertical-align: middle;}
+input[type=radio] {margin: 20px 0 20px 20px;}
+/* input[type=radio] {margin-right: 0; } */
+
+input:enabled {background-color: orange;}
+input:disabled {color : green; font-weight: bold;}
+input:focus {background-color: #bbbb}
+/* input:checked + label { font-weight: bold; color:blue;} */
+
+/* radio 와 checkbox 각각 checked 를 지정하려면 */
+input[type=radio]:checked + label { color: orange; font-weight: bold;}
+input[type=checkbox]:checked + label { color: green; font-weight: bold;}
+
+ul li:hover {background-color: yellow}
+ul li:active {background-color: gray;}
+</style>
 </head>
 <body>
+동작이나 상태와 관련된 가상클래스
+선택자:enabled 활성화된 선택자
+선택자:disabled 비활성화된 선택자(입력 또는 선택이 불가능한)
+선택자:checked 체크박스나 라디오버튼에서 체크된 선택자
+선택자:focus 커서를 갖는 선택자
+선택자:hover 마우스 포인터를 올렸을 때 선택된 선택자
+선택자:active 클릭했을 때 선택된 선택자
+
 <h3>입력양식 선택자</h3>
 <ul>
-	<li>성명: <input type="text" name="name" value="홍길동"></li>
+	<li>성명: <input type="text" name="name" value="홍길동" disabled></li>
 	<li>아이디: <input type="text" name="id" ></li>
 	<li>비밀번호: <input type="password" name="pw"></li>
-	<li>성별: <input id="male" type="radio" name="gender" value="남"><label for="male">남</label>
+	<li>성별: <input id="male" type="radio" name="gender" value="남" checked><label for="male">남</label>
 			  <input id="female" type="radio" name="gender" value="여"><label for="female">여</label></li>
-	<li>취미: <input type="checkbox" name="hobby" value="a"><label>그림</label> </li>
+	<li>취미: 
+		<input type="checkbox" name="hobby" value="a" id="painting"><label for="painting">그림</label>
+		<input type="checkbox" name="hobby" value="b" id="football"><label for="football">축구</label>
+		<input type="checkbox" name="hobby" value="c" id="taveling"><label for="taveling">여행</label>
+	</li>
 </ul>
 </body>
 </html>

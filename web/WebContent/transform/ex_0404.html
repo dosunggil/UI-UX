@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+<style>
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	float: left;
+	margin-right: 20px;
+	width : 250px;
+	height: 200px;
+	box-sizing: border-box;
+	background-color: 	#a19897;
+}
+
+/* ul li:not(:first-child) { */
+/* 	margin-left: 0; */
+/* } */
+.slide-wrap {
+	width: 810px;
+	height: 200px;
+	overflow: hidden; 
+	border: 1px solid;
+	position: relative;
+	box-sizing: border-box;
+}
+.slide {
+	position: absolute;
+	width: 1370px;
+	height: 200px;
+}
+.slide {
+	animation: animation_step 4s 2s infinite ; 
+}
+@keyframes animation_step {
+	0% {left:0}
+	50% {left:-270px;}
+	100% {left:-540px;}
+}
+.plus {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	display:block;
+	left: 200px;
+	top:0;
+	
+}
+</style>
+</head>
+<body>
+<div id="transform2">
+		<div class="slide-wrap">
+			<div class="slide">
+				<ul>
+					<li><h2>인공지능</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						<i class="plus" class="fa-solid fa-plus"></i></li>
+					<li><h2>클라우드 컴퓨팅</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						<i class="fa-solid fa-plus"></i></li>
+					<li><h2>정보보안</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						<i class="fa-solid fa-plus"></i></li>
+					<li><h2>실감형 콘텐츠</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						<i class="fa-solid fa-plus"></i></li>
+					<li><h2>핀테크</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						<i class="fa-solid fa-plus"></i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

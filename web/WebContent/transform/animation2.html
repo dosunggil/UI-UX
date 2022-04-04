@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/slide.css">
+<style>
+#transform .slide {
+	animation: animation_slide 16s linear 1s infinite alternate;
+}
+
+@keyframes animation_slide {
+	0% {left:0}
+	25% {left:-320px;}
+	50% {left:-640px;}
+	75% {left:-960px;}
+	100% {left:-1280px;}
+}
+
+#transform2 .slide {
+	animation: animation_step 16s steps(6,start) 1s infinite alternate;
+}
+@keyframes animation_step {
+	from {left:0px} to {left: -1280px;}
+}
+
+</style>
+</head>
+<body>
+<div id="transform">
+		<div class="slide-wrap">
+			<div class="slide">
+				<ul>
+					<li><img src="../images/cat.jpg"></li>
+					<li><img src="../images/cat1.jpg"></li>
+					<li><img src="../images/elsa.jpg"></li>
+					<li><img src="../images/logo1.jpg"></li>
+					<li><img src="../images/logo2.jpg"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<div id="transform2">
+		<div class="slide-wrap">
+			<div class="slide">
+				<ul>
+					<li><img src="../images/cat.jpg"></li>
+					<li><img src="../images/cat1.jpg"></li>
+					<li><img src="../images/elsa.jpg"></li>
+					<li><img src="../images/logo1.jpg"></li>
+					<li><img src="../images/logo2.jpg"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

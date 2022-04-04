@@ -5,7 +5,9 @@
 <title>Insert title here</title>
 <style>
 body {margin:0;}
-header {padding-top: 90px; background-color: #0670b9;}
+header {
+min-width:1200px;
+padding-top: 90px; background-color: #0670b9;}
 header nav {padding-left:150px; height: 70px; display: inline-block;}
 header a {text-decoration: none; font-weight: bold;font-size: 24px; color: white;}
 header a:hover { color: #fff584}
@@ -23,7 +25,7 @@ section h1 + p {border-bottom: 3px solid #666; padding-bottom: 20px;}
 			}
 .mid li:not(:first-child) {border-left:none;}
 .mid li a { font-size: 16px; text-decoration: none; color: inherit;font-weight: bold;}
-.mid li:first-child {border: 1px solid #3671c8; border-bottom: none; color:#3671c8;}
+.active1 {border-bottom: 1px solid #fff;}
 
 
 #search {height: 50px;}
@@ -67,6 +69,31 @@ footer p {margin-top: 10px;}
 #list a[id=box]:hover {color:blue; text-decoration: underline;}
 #box2 {border:1px solid black;}
 .pg {margin: 0 20px;}
+
+#popup-background {
+display: none;
+width : 100%; height: 100%;
+position: fixed;
+left:0; top: 0;
+/* background-color: rgba(0,0,0,0.3); */
+background-color:  #000;
+opacity: 0.3;
+} 
+#popup { display: none;
+width: 400px; height: 350px;
+position: fixed;
+left: 50%; top:  50%;
+transform: translate(-50%,-50%);
+border: 2px solid #333;
+}
+
+#popup div {height: 300px;}
+#popup img {width:100%; height:100%}
+#popup a {display: inline-block; width: 100%; height: 50px; 
+line-height: 50px; text-align: center; background-color: yellow;
+}
+
+
 </style>
 </head>
 <body>
@@ -84,7 +111,7 @@ footer p {margin-top: 10px;}
 	<h1>개발자 네트워크</h1>
 	<p>개발자들 간의 각종 문제해결 방안, 개발 노하우, 데이터 가공 노하우 등을 자유롭게 참여하여 의견을 나눌 수 있는 공간입니다.</p>
 	<article class="mid1" >
-		<ul class="mid"><li class="active"><a href="#">개발 노하우</a></li><li><a href="#">OPEN API 활용 문의</a></li><li><a href="#">유용한 사이트</a></li></ul>
+		<ul class="mid"><li class="active1"><a class="active1" href="#">개발 노하우</a></li><li><a href="#">OPEN API 활용 문의</a></li><li><a href="#">유용한 사이트</a></li></ul>
 	</article>
 	<article id="search">
 		<div>
@@ -92,7 +119,7 @@ footer p {margin-top: 10px;}
 			<input type="radio" name="selec" id="num2"><label for="num2">제목</label>
 			<input type="radio" name="selec" id="num3"><label for="num3">내용</label>
 			<input type="text" placeholder="검색어를 입력하세요">
-			<input type="button" value="검색">	
+			<input type="button" value="검색" onclick="popup( 'block' )">	
 		</div>
 	</article>
 	<article>
@@ -181,8 +208,7 @@ footer p {margin-top: 10px;}
 		<ul>
 			<li>이용약관</li>
 			<li>개인정보처리방침</li>
-			<li>공공데이터포털 소개</li>
-			<li>분쟁조정신청</li>
+			<li>공공데이터포털 소개</li>			<li>분쟁조정신청</li>
 			<li>개인정보분야별책임자 : 최시복</li>
 		</ul>
 	</aside>
@@ -193,5 +219,26 @@ footer p {margin-top: 10px;}
 	</div>
 
 </footer>
+<div id="popup-background"></div>
+<div id="popup">
+	<div><img src="../images/cat1.jpg" ></div>
+	<a onclick="popup('none')">닫기</a>
+</div>
+<script>
+/* function popup() {
+	document.getElementById("popup").style.display = "block";
+	document.getElementById("popup-background").style.display = "block";
+}
+function close1() {
+	document.getElementById("popup").style.display = "none";
+	document.getElementById("popup-background").style.display = "none";
+
+} */
+function popup(value) {
+	document.getElementById("popup").style.display = value;
+	document.getElementById("popup-background").style.display = value;
+
+}
+</script>
 </body>
 </html>

@@ -18,6 +18,8 @@ ul li {
 	height: 200px;
 	box-sizing: border-box;
 	background-color: 	#a19897;
+	border: 1px solid blue;
+	padding: 10px;
 }
 
 /* ul li:not(:first-child) { */
@@ -27,7 +29,6 @@ ul li {
 	width: 810px;
 	height: 200px;
 	overflow: hidden; 
-	border: 1px solid;
 	position: relative;
 	box-sizing: border-box;
 }
@@ -35,8 +36,6 @@ ul li {
 	position: absolute;
 	width: 1370px;
 	height: 200px;
-}
-.slide {
 	animation: animation_step 4s 2s infinite ; 
 }
 @keyframes animation_step {
@@ -44,14 +43,16 @@ ul li {
 	50% {left:-270px;}
 	100% {left:-540px;}
 }
-.plus {
+li img {
 	width: 40px;
 	height: 40px;
-	position: absolute;
-	display:block;
-	left: 200px;
-	top:0;
-	
+}
+strong {
+line-height: 40px;  height: 40px; vertical-align: middle;
+}
+li div {
+vertical-align: middle;line-height: 40px;  height: 40px;
+
 }
 </style>
 </head>
@@ -60,16 +61,16 @@ ul li {
 		<div class="slide-wrap">
 			<div class="slide">
 				<ul>
-					<li><h2>인공지능</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
-						<i class="plus" class="fa-solid fa-plus"></i></li>
-					<li><h2>클라우드 컴퓨팅</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
-						<i class="fa-solid fa-plus"></i></li>
-					<li><h2>정보보안</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
-						<i class="fa-solid fa-plus"></i></li>
-					<li><h2>실감형 콘텐츠</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
-						<i class="fa-solid fa-plus"></i></li>
-					<li><h2>핀테크</h2><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
-						<i class="fa-solid fa-plus"></i></li>
+					<li><div><img src="../images/grape.png"><strong>인공지능</strong></div><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						</li>
+					<li><div><img src="../images/grape.png"><strong>클라우드 컴퓨팅</strong></div><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						</li>
+					<li><div><img src="../images/grape.png"><strong>정보보안</strong></div><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						</li>
+					<li><div><img src="../images/grape.png"><strong>실감형 콘텐츠</strong></div><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						</li>
+					<li><div><img src="../images/grape.png"><strong>핀테크</strong></div><p>블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
+						</li>
 				</ul>
 			</div>
 		</div>
